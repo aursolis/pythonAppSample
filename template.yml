@@ -37,3 +37,20 @@ Resources:
           Properties:
             Path: /spanish
             Method: post
+  HalloWelt:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: hallo.handler
+      Runtime: python3.6
+      CodeUri: ./
+      Events:
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /german
+            Method: get
+        PostEvent:
+          Type: Api
+          Properties:
+            Path: /german
+            Method: post

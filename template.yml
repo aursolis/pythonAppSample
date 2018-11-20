@@ -6,19 +6,19 @@ Resources:
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: hello.handler
       Runtime: python3.6
       CodeUri: ./
       Events:
         GetEvent:
           Type: Api
           Properties:
-            Path: /
+            Path: /english
             Method: get
         PostEvent:
           Type: Api
           Properties:
-            Path: /
+            Path: /english
             Method: post
   HolaMundo:
     Type: AWS::Serverless::Function

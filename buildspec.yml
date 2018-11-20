@@ -9,8 +9,8 @@ phases:
 
   build:
     commands:
-      - cd repo1
-      - cd repo2
+      - mkdir repo1
+      - mkdir repo2
       # Use AWS SAM to package the application by using AWS CloudFormation
       - aws cloudformation package --template template.yml --s3-bucket pythonappsamplebucket --output-template template-export.yml
 
